@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+   
+    ul {
+        font: 14px Verdana, Geneva, sans-serif;
+        width: 470px;
+        margin: auto;
+        /* Выставляем родителю значение -.36em */
+        letter-spacing : -6px;
+        font-size : 0;
+        padding: 0;
+    }
+    ul li {
+        display : inline-block;
+        width : 150px;
+        height : 150px;
+        background: green;
+        margin: 5px;
+
+        /* Возвращаем в нормальное состояние у потомков */
+        letter-spacing: normal;
+        font-size : 14px;
+
+        /* эмуляция inline-block для IE6-7*/
+    //display : inline;
+    //zoom : 1;
+    }
+    li:nth-child(3n) {
+        margin-right: 0px;
+    }
+    li:nth-child(3n + 4), li:first-child {
+        margin-left: 0;
+    }
+</style>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+</body>
+</html>

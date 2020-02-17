@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html, body{
+            margin:0;
+            padding:0;
+            width:100%;
+            height:100%;
+        }
+        #slider {
+            width: 100px;
+            height: 100px;
+            transition: 2s;
+            position:absolute;
+            top:50%;
+            left:50%;
+            margin:-50px 0 0 -50px;
+        }
+
+
+    </style>
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="slider"></div>
+
+<script>
+
+     var color = [ 'red', 'orange','yellow','green','DodgerBlue','blue','purple',
+        'blue','purple','green','yellow','orange','red','orange','yellow',
+        'green','blue','purple','blue','purple','green','yelow','orange'];
+
+        function changeColor(currentNumber,color){
+        currentNumber++;
+        if(currentNumber >color.length){
+            currentNumber = 1;
+        }
+
+        $('#slider').css("background-color" , color[currentNumber]);
+
+
+        setTimeout(function(){
+            changeColor(currentNumber,color)
+        }, 4000);
+    }
+
+     $( document ).ready(function() {
+         changeColor(0,color)
+     });
+
+
+
+</script>
+</body>
+</html>
